@@ -1,0 +1,30 @@
+/* @import url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2);
+
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 100;
+    font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2)
+            format('woff2'),
+        url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff)
+            format('woff');
+}
+h2 {
+    font-family: 'Netflix Sans';
+    font-weight: 700;
+}
+span {
+    font-size: 8em;
+    font-family: impact;
+    display: block;
+}
+.logo {
+    perspective: 1000px;
+    perspective-origin: 50% 0;
+}
+
+// Transform the letter
+.logo span {
+    transform-origin: 0 0;
+    transform: scaleX(80) rotateY(89.5deg);
+} */
