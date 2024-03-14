@@ -10,7 +10,8 @@ import Header from '../components/fragments/Header';
 export default function Home() {
     const baseUrl = 'https://api.themoviedb.org/3';
     const [movies, setMovies] = useState([]);
-    // const [query, setQuery] = useState('');
+    const Authorization =
+        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTIwNDdmMWU5MDVhZTMwZTlhZmYyMGVkOTU3NmYzNiIsInN1YiI6IjY1ZWQ1ZDM5MWFjMjkyMDE4NjZhMmI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7TK1Y1CoSPAfMqzAQRaykp1K0cTjaMJkj4iBhcRPazE';
     const api_key = '3b9b9a7b5b5d9e6b4f1d8e9b9c5f3d2e';
 
     const getMovies = async () => {
@@ -20,8 +21,7 @@ export default function Home() {
             },
             headers: {
                 'Content-Type': 'application/json',
-                Authorization:
-                    'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTIwNDdmMWU5MDVhZTMwZTlhZmYyMGVkOTU3NmYzNiIsInN1YiI6IjY1ZWQ1ZDM5MWFjMjkyMDE4NjZhMmI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7TK1Y1CoSPAfMqzAQRaykp1K0cTjaMJkj4iBhcRPazE',
+                Authorization,
             },
         });
 
@@ -36,8 +36,7 @@ export default function Home() {
             },
             headers: {
                 'Content-Type': 'application/json',
-                Authorization:
-                    'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTIwNDdmMWU5MDVhZTMwZTlhZmYyMGVkOTU3NmYzNiIsInN1YiI6IjY1ZWQ1ZDM5MWFjMjkyMDE4NjZhMmI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7TK1Y1CoSPAfMqzAQRaykp1K0cTjaMJkj4iBhcRPazE',
+                Authorization,
             },
         });
 

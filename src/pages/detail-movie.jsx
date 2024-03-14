@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import ScrollOnTop from '../components/elements/ScrollOnTop';
 import SkeletonLoading from '../components/fragments/SkeletonLoading';
