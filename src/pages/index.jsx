@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import CardContent from '../components/fragments/CardContent';
 import Header from '../components/fragments/Header';
 import axios from 'axios';
+import MovieList from '../components/fragments/MovieList';
 
 export default function Index() {
     const [nowPlaying, setNowPlaying] = useState([]);
@@ -123,62 +123,10 @@ export default function Index() {
             </div>
 
             <div className='bg-gradient-navy w-full h-full px-20 relative'>
-                <div className='text-white text-2xl pt-5 font-bold'>
-                    <h2 className='mt-10'>Recommend</h2>
-                </div>
-                <div className='mt-5 p-5 flex overflow-x-scroll no-scrollbar cursor-pointer'>
-                    <div className='flex items-center'>
-                        {nowPlaying.length > 0 &&
-                            nowPlaying.map((movie) => (
-                                <CardContent
-                                    movie={movie.poster_path}
-                                    key={movie.id}
-                                />
-                            ))}
-                    </div>
-                </div>
-                <div className='text-white text-2xl font-bold'>
-                    <h2 className='mt-10'>Popular</h2>
-                </div>
-                <div className='mt-5 p-5 flex overflow-x-scroll no-scrollbar cursor-pointer'>
-                    <div className='flex items-center'>
-                        {popular.length > 0 &&
-                            popular.map((movie) => (
-                                <CardContent
-                                    movie={movie.poster_path}
-                                    key={movie.id}
-                                />
-                            ))}
-                    </div>
-                </div>
-                <div className='text-white text-2xl font-bold'>
-                    <h2 className='mt-10'>Top Rated</h2>
-                </div>
-                <div className='mt-5 p-5 flex overflow-x-scroll no-scrollbar cursor-pointer'>
-                    <div className='flex items-center'>
-                        {toprated.length > 0 &&
-                            toprated.map((movie) => (
-                                <CardContent
-                                    movie={movie.poster_path}
-                                    key={movie.id}
-                                />
-                            ))}
-                    </div>
-                </div>
-                <div className='text-white text-2xl font-bold'>
-                    <h2 className='mt-10'>Upcoming</h2>
-                </div>
-                <div className='mt-5 p-5 flex overflow-x-scroll no-scrollbar cursor-pointer'>
-                    <div className='flex items-center'>
-                        {upcoming.length > 0 &&
-                            upcoming.map((movie) => (
-                                <CardContent
-                                    movie={movie.poster_path}
-                                    key={movie.id}
-                                />
-                            ))}
-                    </div>
-                </div>
+                <MovieList title={'Recommend'} movies={nowPlaying}></MovieList>
+                <MovieList title={'Popular'} movies={popular}></MovieList>
+                <MovieList title={'Top Rated'} movies={toprated}></MovieList>
+                <MovieList title={'Up Coming'} movies={upcoming}></MovieList>
             </div>
         </>
     );
