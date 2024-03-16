@@ -13,6 +13,7 @@ export default function MovieList({ title, movies }) {
                             <CardContent
                                 movie={movie.poster_path}
                                 key={movie.id}
+                                id={movie.id}
                             />
                         ))}
                 </div>
