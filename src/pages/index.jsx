@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Header from '../components/fragments/Header';
-import axios from 'axios';
 import MovieList from '../components/fragments/MovieList';
 import {
     getNowPlaying,
@@ -18,56 +17,6 @@ export default function Index() {
     const Authorization =
         'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTIwNDdmMWU5MDVhZTMwZTlhZmYyMGVkOTU3NmYzNiIsInN1YiI6IjY1ZWQ1ZDM5MWFjMjkyMDE4NjZhMmI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7TK1Y1CoSPAfMqzAQRaykp1K0cTjaMJkj4iBhcRPazE';
     const api_key = '6f5fae224e77f838e4a1ee94d88f53cf';
-    // const getNowPlaying = async () => {
-    //     const response = await axios.get(
-    //         `https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}&language=en-US&page=1`,
-    //         {
-    //             headers: {
-    //                 accept: 'application/json',
-    //                 Authorization,
-    //             },
-    //         }
-    //     );
-    //     return response.data.results;
-    // };
-
-    // const getPopular = async () => {
-    //     const response = await axios.get(
-    //         'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
-    //         {
-    //             headers: {
-    //                 accept: 'application/json',
-    //                 Authorization,
-    //             },
-    //         }
-    //     );
-    //     return response.data.results;
-    // };
-    // const getTopRated = async () => {
-    //     const response = await axios.get(
-    //         'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',
-    //         {
-    //             headers: {
-    //                 accept: 'application/json',
-    //                 Authorization,
-    //             },
-    //         }
-    //     );
-    //     return response.data.results;
-    // };
-
-    // const getUpcoming = async () => {
-    //     const response = await axios.get(
-    //         'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1',
-    //         {
-    //             headers: {
-    //                 accept: 'application/json',
-    //                 Authorization,
-    //             },
-    //         }
-    //     );
-    //     return response.data.results;
-    // };
 
     useEffect(() => {
         getNowPlaying(api_key, Authorization, (data) => {
@@ -78,12 +27,6 @@ export default function Index() {
         getPopular(Authorization, (data) => setPopular(data));
         getTopRated(Authorization, (data) => setTopRated(data));
         getUpcoming(Authorization, (data) => setUpcoming(data));
-
-        // getPopular().then((data) => {
-        //     setPopular(data);
-        // });
-        // getTopRated().then((data) => setTopRated(data));
-        // getUpcoming().then((data) => setUpcoming(data));
     }, []);
 
     return (
@@ -141,12 +84,4 @@ export default function Index() {
             </div>
         </>
     );
-}
-{
-    /* <iframe
-    src='https://www.youtube.com/embed/WhY7uyc56ms?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=WhY7uyc56ms'
-    title='YouTube video player'
-    frameborder='0'
-    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-    allowfullscreen></iframe>; */
 }
