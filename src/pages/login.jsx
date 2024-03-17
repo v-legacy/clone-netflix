@@ -1,5 +1,3 @@
-import Header from '../components/fragments/Header';
-
 export const Login = () => {
     const handleModal = () => {
         const modal = document.getElementById('modal');
@@ -48,12 +46,14 @@ export const Login = () => {
                                                 Forget Password
                                             </a>
                                         </div>
-                                        <div className='mt-5 w-full mx-auto flex flex-row justify-start'>
+                                        <div className='mt-5 w-full flex flex-row justify-start'>
                                             <input type='checkbox' />
-                                            <span>Ingat Saya</span>
+                                            <span className='ml-2'>
+                                                Ingat Saya
+                                            </span>
                                         </div>
                                         <div className='mt-5 w-full mx-auto flex flex-row justify-start'>
-                                            <p>
+                                            <p className='leading-8'>
                                                 {' '}
                                                 Baru di Netflix? &nbsp;
                                                 <span className='font-bold'>
