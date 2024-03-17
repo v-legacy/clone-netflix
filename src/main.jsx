@@ -11,6 +11,7 @@ import Home from './pages/home.jsx';
 import DetailMovie from './pages/detail-movie.jsx';
 import detailMoviesLoader from './components/loader/detailMoviesLoader.jsx';
 import Index from './pages/index.jsx';
+import { Login } from './pages/login.jsx';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
                 element={<DetailMovie />}
                 loader={detailMoviesLoader}
             />
+            <Route path='/login' element={<Login />} />
         </Route>
     )
 );

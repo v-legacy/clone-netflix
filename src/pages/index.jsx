@@ -15,12 +15,12 @@ export default function Index() {
     const [upcoming, setUpcoming] = useState([]);
 
     const Authorization =
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTIwNDdmMWU5MDVhZTMwZTlhZmYyMGVkOTU3NmYzNiIsInN1YiI6IjY1ZWQ1ZDM5MWFjMjkyMDE4NjZhMmI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7TK1Y1CoSPAfMqzAQRaykp1K0cTjaMJkj4iBhcRPazE';
-    const api_key = '6f5fae224e77f838e4a1ee94d88f53cf';
+        'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTIwNDdmMWU5MDVhZTMwZTlhZmYyMGVkOTU3NmYzNiIsInN1YiI6IjY1ZWQ1ZDM5MWFjMjkyMDE4NjZhMmI4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7TK1Y1CoSPAfMqzAQRaykp1K0cTjaMJkj4iBhcRPazE';
+    const api_key = '352047f1e905ae30e9aff20ed9576f36';
 
     useEffect(() => {
         getNowPlaying(api_key, Authorization, (data) => {
-            console.log(data);
+            // console.log(data);
             setNowPlaying(data);
         });
 
